@@ -3,7 +3,7 @@
 Baker's percentage calculator
 </h1>
 
-![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif)
+![screenshot](https://raw.githubusercontent.com/  .gif)
 
 <p align="center">
 <a href="#introduction">Introduction</a> •
@@ -26,7 +26,7 @@ Imagine baking as a fun adventure, where we use special math to make delicious t
 * Scaling Capabilities: The calculator enables easy scaling of recipes by adjusting ingredient quantities while preserving the desired ratios. It helps you adapt recipes to different batch sizes without compromising the integrity of the formula.
 * Quick and Accurate Results: The calculator performs calculations instantly, providing accurate baker's percentages with minimal effort. It saves time and reduces the likelihood of human error when manually calculating ingredient ratios.
 * Web version
-  -  Multiple Recipe Management: Advanced calculators offer the ability to manage and save multiple recipes, allowing you to store and retrieve your preferred formulas for future use.
+  -  Recipe Management: Advanced calculators offer the ability to manage and save multiple recipes, allowing you to store and retrieve your preferred formulas for future use. 
 
 **These features collectively enhance the precision, consistency, and scalability of your baking recipes, making the Baker's Percentage Calculator an invaluable tool for both amateur and professional bakers.**
 
