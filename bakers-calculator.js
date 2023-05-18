@@ -41,8 +41,6 @@ function ingredientPercentage(ingredientWeight, doughWeight) {
     }
 }
 
-console.log(ingredientPercentage(200, 500))
-
 
 /**
  * Expects the values to be positive 
@@ -81,9 +79,6 @@ function ingredientWeight(ingredientPercent, doughWeight) {
         return `Error: ${error.message}`;
     }
 }
-
-console.log(ingredientWeight(40, 500))
-
 
 module.exports = { ingredientPercentage, ingredientWeight }
 
