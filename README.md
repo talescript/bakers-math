@@ -32,6 +32,9 @@ Imagine baking as a fun adventure, where we use special math to make delicious t
 
 ## How To Use
 
+> You can run `npm install bakers-math`
+> alternatively:
+
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
@@ -44,13 +47,7 @@ $ cd bakers-math
 # Install dependencies
 $ npm install
 
-# Run the app
-$ npm start
 ```
-
-> **Note**
-> alternatively you can run `npm install bakers-math`
-
 
 
 ## The Sourdough Framework
