@@ -194,7 +194,7 @@
     "yocto-queue": "^0.1.0"
   },
   "scripts": {
-    "test": "jest --watchAll"
+    "test": "jest --watchAll --coverage"
   },
   "repository": {
     "type": "git",
