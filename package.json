@@ -6,7 +6,6 @@
   "description": "Baker's percentage calculator",
   "version": "1.0.0",
   "main": "bakersPercentageCalculator.js",
-
   "scripts": {
     "test": "jest --watchAll --coverage"
   },
