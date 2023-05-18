@@ -1,4 +1,3 @@
-/* eslint-disable */
 /**
  * Baker's Percentage = (Ingredient Weight / Flour Weight) * 100
  * 
@@ -88,4 +87,3 @@ console.log(ingredientWeight(40, 500))
 
 module.exports = { ingredientPercentage, ingredientWeight }
 
-/* eslint-disable */

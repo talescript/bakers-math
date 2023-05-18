@@ -1,4 +1,3 @@
-/* eslint-disable */
 const bc = require('./bakers-calculator')
 
 test('300g of water divided over 500g flour to equal 60', () => {
