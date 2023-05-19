@@ -1,11 +1,11 @@
 const RecipeCreator = require('./recipe-calculator')
 
 // Example usage
-const creator = new RecipeCreator('buns', 100);
+const creator = new RecipeCreator('buns', 200);
 
-creator.setQuantity(20);
+creator.setQuantity(4);
 
-creator.addIngredient('Water', 63);
+creator.addIngredient('Water', 60);
 creator.addIngredient('Yeast', 1.4);
 creator.addIngredient('Salt', 2);
 creator.addIngredient('Sugar', 5);
