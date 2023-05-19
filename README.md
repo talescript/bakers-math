@@ -33,20 +33,29 @@ Imagine baking as a fun adventure, where we use special math to make delicious t
 ## How To Use
 
 > You can run `npm install bakers-math`
-> alternatively:
 
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
-# Clone this repository
-$ git clone https://github.com/talescript/bakers-math.git
+const RecipeCreator = require('bakers-math')
 
-# Go into the repository
-$ cd bakers-math
+// Example usage
+const creator = new RecipeCreator('Pizza', 120);
 
-# Install dependencies
-$ npm install
+creator.setQuantity(10); // Set the desired quantity to 10
 
+creator.addIngredient('Water', 60);
+creator.addIngredient('Yeast', 2);
+creator.addIngredient('Salt', 1);
+creator.addIngredient('Sugar', 5);
+creator.addIngredient('Sourdough', 8);
+
+const recipe = creator.createRecipe();
+
+console.log(recipe);
+console.log(`Recipe quantity: ${recipe.quantity}`);
+console.log(`Recipe ingredient: ${recipe.ingredients[0].name}`);
+console.log(`Recipe weight: ${recipe.ingredients[0].weight}`);
 ```
 
 
