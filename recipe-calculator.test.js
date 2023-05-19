@@ -13,6 +13,8 @@ test('Calculate ingredient percentage correctly', () => {
 describe('RecipeCreator', () => {
   test('Create recipe with default quantity', () => {
     const create = new RecipeCreator('Pizza', 120);
+    create.setQuantity(10);
+    
     create.addIngredient('Water', 60);
     create.addIngredient('Yeast', 2);
     create.addIngredient('Salt', 1);
@@ -20,11 +22,11 @@ describe('RecipeCreator', () => {
 
     expect(recipe.product).toBe('Pizza');
     expect(recipe.individualWeight).toBe(120);
-    expect(recipe.quantity).toBe(1);
+    expect(recipe.quantity).toBe(10);
     expect(recipe.ingredients).toHaveLength(3);
-    expect(recipe.ingredients).toContainEqual({ name: 'Water', weight: 72 });
-    expect(recipe.ingredients).toContainEqual({ name: 'Yeast', weight: 2.4 });
-    expect(recipe.ingredients).toContainEqual({ name: 'Salt', weight: 1.2 });
+    expect(recipe.ingredients).toContainEqual({ name: 'Water', weight: 720 });
+    expect(recipe.ingredients).toContainEqual({ name: 'Yeast', weight: 24 });
+    expect(recipe.ingredients).toContainEqual({ name: 'Salt', weight: 12 });
   });
 
   test('Create recipe with custom quantity', () => {
