@@ -1,46 +1,44 @@
-const RecipeCreator = require('./recipe-calculator')
+const RecipeCreator = require('./recipe-calculator');
 
-const bc = require('./bakers-calculator');
+test('Create recipe with default quantity', () => {
+  const creator = new RecipeCreator('Buns', 100);
+  creator.addIngredient('Water', 60);
+  creator.addIngredient('Yeast', 1.4);
+  creator.addIngredient('Salt', 2);
 
-// Test the ingredientPercentage function
-test('Calculate ingredient percentage correctly', () => {
-  expect(bc.ingredientPercentage(300, 500)).toBe(60);
-  expect(bc.ingredientPercentage(750, 1000)).toBe(75);
-  expect(bc.ingredientPercentage(20, 1000)).toBe(2);
+  const recipe = creator.createRecipe();
+
+  expect(recipe.product).toBe('Buns');
+  expect(recipe.individualWeight).toBe(100);
+  expect(recipe.quantity).toBe(1);
+  expect(recipe.totalPercentage).toBe(163.4);
+  expect(recipe.totalWeight).toBe(100);
+  expect(recipe.flourWeight).toBe(61);
+  expect(recipe.ingredients).toEqual([
+    { name: 'Water', weight: 37 },
+    { name: 'Yeast', weight: 1 },
+    { name: 'Salt', weight: 1 },
+  ]);
 });
 
-// Test the RecipeCreator class
-describe('RecipeCreator', () => {
-  test('Create recipe with default quantity', () => {
-    const create = new RecipeCreator('Pizza', 120);
-    create.setQuantity(10);
-    
-    create.addIngredient('Water', 60);
-    create.addIngredient('Yeast', 2);
-    create.addIngredient('Salt', 1);
-    const recipe = create.createRecipe();
+test('Create recipe with custom quantity', () => {
+  const creator = new RecipeCreator('Buns', 100);
+  creator.setQuantity(10);
+  creator.addIngredient('Water', 60);
+  creator.addIngredient('Yeast', 1.4);
+  creator.addIngredient('Salt', 2);
 
-    expect(recipe.product).toBe('Pizza');
-    expect(recipe.individualWeight).toBe(120);
-    expect(recipe.quantity).toBe(10);
-    expect(recipe.ingredients).toHaveLength(3);
-    expect(recipe.ingredients).toContainEqual({ name: 'Water', weight: 720 });
-    expect(recipe.ingredients).toContainEqual({ name: 'Yeast', weight: 24 });
-    expect(recipe.ingredients).toContainEqual({ name: 'Salt', weight: 12 });
-  });
+  const recipe = creator.createRecipe();
 
-  test('Create recipe with custom quantity', () => {
-    const create = new RecipeCreator('Buns', 200);
-    create.setQuantity(4);
-    create.addIngredient('Flour', 100);
-    create.addIngredient('Water', 60);
-    const recipe = create.createRecipe();
-
-    expect(recipe.product).toBe('Buns');
-    expect(recipe.individualWeight).toBe(200);
-    expect(recipe.quantity).toBe(4);
-    expect(recipe.ingredients).toHaveLength(2);
-    expect(recipe.ingredients).toContainEqual({ name: 'Flour', weight: 800 });
-    expect(recipe.ingredients).toContainEqual({ name: 'Water', weight: 480 });
-  });
+  expect(recipe.product).toBe('Buns');
+  expect(recipe.individualWeight).toBe(100);
+  expect(recipe.quantity).toBe(10);
+  expect(recipe.totalPercentage).toBe(163.4);
+  expect(recipe.totalWeight).toBe(1000);
+  expect(recipe.flourWeight).toBe(612);
+  expect(recipe.ingredients).toEqual([
+    { name: 'Water', weight: 367 },
+    { name: 'Yeast', weight: 9 },
+    { name: 'Salt', weight: 12 },
+  ]);
 });
