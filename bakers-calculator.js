@@ -66,7 +66,6 @@ function ingredientWeight(ingredientPercent, doughWeight) {
             throw new Error('doughWeight must be higher than zero.');
         }
 
-    
         const weight = (ingredientPercent / 100) * doughWeight;
         const roundedWeight = weight >= 0 ? Math.floor(weight * 100) / 100 : Math.ceil(weight * 100) / 100;
     
