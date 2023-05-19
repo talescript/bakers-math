@@ -24,7 +24,9 @@ class RecipeCreator {
       totalPercentage += ingredient.percentage;
     }
 
-    const flourWeight = (this.individualWeight * 100) / totalPercentage;
+    const totalFlour = (totalWeight / totalPercentage) * 100;
+    const flourWeight = Math.round(totalFlour);
+
 
     const recipe = {
       product: this.product,
@@ -37,8 +39,8 @@ class RecipeCreator {
     };
 
     for (const ingredient of this.ingredients) {
-      const ingredientWeightValue = ingredientWeight(ingredient.percentage, this.individualWeight) * this.quantity;
-      recipe.ingredients.push({ name: ingredient.name, weight: ingredientWeightValue });
+      const ingredientWeightValue = (ingredientWeight(ingredient.percentage, this.individualWeight) * totalFlour / 100);
+      recipe.ingredients.push({ name: ingredient.name, weight: Math.round(ingredientWeightValue) });
     }
 
     return recipe;
