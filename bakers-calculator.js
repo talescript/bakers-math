@@ -61,10 +61,6 @@ function ingredientWeight(ingredientPercent, doughWeight) {
         if (isNaN(ingredientPercent) || isNaN(doughWeight)) {
             throw new Error('Nan')
         }
-
-        if (!Number.isInteger(ingredientPercent)) {
-            throw new Error('The program converts the value into a float');
-        }
     
         if (doughWeight === 0) {
             throw new Error('doughWeight must be higher than zero.');
