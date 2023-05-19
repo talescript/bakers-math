@@ -1,4 +1,4 @@
-const RecipeCreator = require('./recipe-calculator')
+const RecipeCreator = require('bakers-math')
 
 // Example usage
 const creator = new RecipeCreator('Pizza', 120);
