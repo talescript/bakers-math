@@ -52,8 +52,8 @@ test('doughWeight must be a number', () => {
     expect(bc.ingredientWeight(200, '0')).toEqual('Error: Both ingredientPercent and doughWeight must be numeric values.');
 });
 
-test('doughWeight must be a number', () => {
-    expect(bc.ingredientWeight(0.4, 500)).toEqual('Error: The program converts the value into a float');
+test('0.4% of salt with 500g flour to equal 2g', () => {
+    expect(bc.ingredientWeight(0.4, 500)).toEqual(2);
 });
 
 test('doughWeight must be a higher than zero', () => {
