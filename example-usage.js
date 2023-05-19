@@ -1,4 +1,4 @@
-const RecipeCreator = require('bakers-math')
+const RecipeCreator = require('./recipe-calculator')
 
 // Example usage
 const creator = new RecipeCreator('Pizza', 120);
@@ -14,6 +14,6 @@ creator.addIngredient('Sourdough', 8);
 const recipe = creator.createRecipe();
 
 console.log(recipe);
-console.log(recipe.quantity);
-console.log(recipe.ingredients[0].name);
-console.log(recipe.ingredients[0].weight);
+console.log(`Recipe quantity: ${recipe.quantity}`);
+console.log(`Recipe ingredient: ${recipe.ingredients[0].name}`);
+console.log(`Recipe weight: ${recipe.ingredients[0].weight}`);
