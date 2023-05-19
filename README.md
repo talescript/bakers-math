@@ -3,7 +3,9 @@
 Baker's percentage calculator
 </h1>
 
-![screenshot](https://raw.githubusercontent.com/  .gif)
+<p align="center">
+    <img src="assets/bread.jpeg" height="300px">
+</p>
 
 <p align="center">
 <a href="#introduction">Introduction</a> •
