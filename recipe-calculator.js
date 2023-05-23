@@ -8,10 +8,6 @@ class RecipeCreator {
     this.quantity = quantity; // Default quantity is 1
   }
 
-  // setQuantity(quantity) {
-  //   this.quantity = quantity;
-  // }
-
   addIngredient(name, percentage) {
     this.ingredients.push({ name, percentage });
   }
@@ -47,7 +43,7 @@ class RecipeCreator {
   }
 }
 
-const create = new RecipeCreator('loaf', 100, 20)
+const create = new RecipeCreator('Buns', 100, 20)
 create.addIngredient('Water', 63)
 create.addIngredient('Salt', 2)
 create.addIngredient('Yeast', 1.4)
