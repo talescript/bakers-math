@@ -42,22 +42,22 @@ To clone and run this application, you'll need [Git](https://git-scm.com) and [N
 const RecipeCreator = require('bakers-math')
 
 // Example usage
-const creator = new RecipeCreator('Pizza', 120);
+// set the bakery product, how much each one should 
+// weight, and how many to be made.
+const creator = new RecipeCreator('Buns', 100, 20);
 
-creator.setQuantity(10); // Set the desired quantity to 10
 
-creator.addIngredient('Water', 60);
-creator.addIngredient('Yeast', 2);
-creator.addIngredient('Salt', 1);
-creator.addIngredient('Sugar', 5);
-creator.addIngredient('Sourdough', 8);
+// Add the percentage of the 
+// additional ingredients
+creator.addIngredient('Water', 63);
+creator.addIngredient('Yeast', 1.4);
+creator.addIngredient('Salt', 2);
 
 const recipe = creator.createRecipe();
 
 console.log(recipe);
 console.log(`Recipe quantity: ${recipe.quantity}`);
-console.log(`Recipe ingredient: ${recipe.ingredients[0].name}`);
-console.log(`Recipe weight: ${recipe.ingredients[0].weight}`);
+console.log(`Ingredient: ${recipe.ingredients[0].name}, weight: ${recipe.ingredients[0].weight}g`);
 ```
 
 
