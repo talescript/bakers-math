@@ -43,14 +43,4 @@ class RecipeCreator {
   }
 }
 
-const create = new RecipeCreator('Buns', 100, 20)
-create.addIngredient('Water', 63)
-create.addIngredient('Salt', 2)
-create.addIngredient('Yeast', 1.4)
-
-const recipe = create.createRecipe()
-console.log(recipe)
-
-
-
 module.exports = RecipeCreator;
