@@ -1,16 +1,16 @@
 const { ingredientPercentage, ingredientWeight } = require('./bakers-calculator');
 
 class RecipeCreator {
-  constructor(product, individualWeight) {
+  constructor(product, individualWeight, quantity) {
     this.product = product;
     this.individualWeight = individualWeight;
     this.ingredients = [];
-    this.quantity = 1; // Default quantity is 1
+    this.quantity = quantity; // Default quantity is 1
   }
 
-  setQuantity(quantity) {
-    this.quantity = quantity;
-  }
+  // setQuantity(quantity) {
+  //   this.quantity = quantity;
+  // }
 
   addIngredient(name, percentage) {
     this.ingredients.push({ name, percentage });
@@ -46,5 +46,15 @@ class RecipeCreator {
     return recipe;
   }
 }
+
+const create = new RecipeCreator('loaf', 100, 20)
+create.addIngredient('Water', 63)
+create.addIngredient('Salt', 2)
+create.addIngredient('Yeast', 1.4)
+
+const recipe = create.createRecipe()
+console.log(recipe)
+
+
 
 module.exports = RecipeCreator;
